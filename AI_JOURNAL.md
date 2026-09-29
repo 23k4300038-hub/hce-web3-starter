@@ -15,3 +15,19 @@ Bảng phân tích chi tiết 10 hàm có quyền `onlyOwner` bao gồm: `issue`
 **Cách sửa:** Sinh viên tự đối chiếu số dòng của hàm `issue` và `addBlackList` trên Etherscan để xác nhận vị trí chuẩn xác.
 
 **Ai phát hiện:** AI phân tích và Sinh viên kiểm chứng đối chiếu lại.
+
+---
+
+## Lần 2: Khảo sát thị trường và Tokenomics - LAB 5
+
+**Prompt:**
+"Dựa trên hình ảnh dữ liệu CoinMarketCap của BTC và ETH, hãy lập bảng so sánh các chỉ số thị trường (Giá, Vốn hóa, Volume 24h, Cung lưu hành, Max supply) và phân tích rủi ro Tokenomics của 2 đồng tiền này."
+
+**AI trả về:**
+Bảng số liệu chính xác theo hình ảnh chụp thực tế (BTC ~2,19 tỷ VND, ETH ~71 triệu VND) kèm phân tích rủi ro lạm phát/nguồn cung của từng đồng.
+
+**Đánh giá:** Dùng được.
+
+**Chỗ sai:** Không có. Số liệu trích xuất chính xác từ ảnh giao diện tiếng Việt của CoinMarketCap.
+
+**Ai phát hiện:** Sinh viên chụp ảnh màn hình cung cấp dữ liệu đầu vào chuẩn xác cho AI.
