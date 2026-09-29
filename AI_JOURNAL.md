@@ -31,3 +31,25 @@ Bảng số liệu chính xác theo hình ảnh chụp thực tế (BTC ~2,19 t�
 **Chỗ sai:** Không có. Số liệu trích xuất chính xác từ ảnh giao diện tiếng Việt của CoinMarketCap.
 
 **Ai phát hiện:** Sinh viên chụp ảnh màn hình cung cấp dữ liệu đầu vào chuẩn xác cho AI.
+
+---
+
+## Lần 3: Sinh mã Python và kiểm tra kết quả - LAB 6
+
+**Prompt:**
+"Đọc tệp SPEC.md trong dự án và viết chương trình Python thực hiện đúng đặc tả đó. Tuân thủ các quy ước trong AGENTS.md. Trước khi viết mã, tóm tắt lại cách bạn hiểu yêu cầu."
+
+**AI trả về:**
+Mã nguồn Python `cashflow_analyzer.py` kết nối Etherscan API để truy vấn lịch sử giao dịch và tính toán dòng tiền.
+
+**Đánh giá:** ⚠️ Phải sửa.
+
+**Chỗ sai (Phát hiện 2 lỗi do AI sinh ra theo danh mục kiểm tra):**
+1. **Lỗi 1 (Đơn vị tiền - Vi phạm R5):** AI giữ nguyên giá trị ở đơn vị `wei` mà không chia cho 10^18 để đổi sang `ETH` trước khi hiển thị.
+2. **Lỗi 2 (Bỏ qua giao dịch thất bại & Phí gas - Vi phạm R3 & R4):** AI dùng lệnh `continue` bỏ qua các giao dịch lỗi (`isError == 1`). Theo quy tắc R4, giao dịch thất bại vẫn tốn phí gas nên phải tính phí gas đó vào tổng dòng tiền ra.
+
+**Cách sửa:**
+- Bổ sung phép chia `value_eth = value / (10**18)`.
+- Tính phí gas `gas_fee = (int(tx['gasUsed']) * int(tx['gasPrice'])) / (10**18)` và cộng phí này vào dòng tiền ra ngay cả khi giao dịch bị thất bại.
+
+**Ai phát hiện:** Sinh viên đối chiếu với danh mục kiểm tra Lab 6 và phát hiện.
