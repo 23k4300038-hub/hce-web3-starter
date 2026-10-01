@@ -1,42 +1,31 @@
-# ECO2432 Web3 Starter
+# BÁO CÁO TỔNG HỢP BÀI THỰC HÀNH MÔN ECO2432
 
-Kho khởi đầu dùng xuyên suốt 15 bài thực hành.
+* **Họ và tên:** Võ Thị Thư
+* **Mã sinh viên:** 23k4300038
+* **Khoa:** Hệ thống thông tin kinh tế - Trường Đại học Kinh tế, Đại học Huế
+* **Repository:** `github.com/23k4300038-hub/hce-web3-starter`
 
-## Bắt đầu (thay cho bước "Fork kho" trong sổ tay)
+---
 
-Sổ tay ghi "Fork kho `hce-web3-starter`". Học kỳ này kho được phát dạng tệp nén, nên làm như sau:
+## 📑 Danh mục các bài thực hành (Lab Index)
 
-1. Giải nén thư mục này vào máy, mở bằng Antigravity.
-2. Đọc `AGENTS.md` trước khi yêu cầu công cụ AI sinh mã.
-3. Sao chép `SPEC.md` và `AI_JOURNAL.md` cho từng bài.
-4. Chỉ dùng ví thử nghiệm và mạng Sepolia; không dùng khóa ví có tiền thật.
+| Bài thực hành | Nội dung chính | Tệp báo cáo chi tiết | Trạng thái |
+| :--- | :--- | :--- | :--- |
+| **Lab 1 & 2** | Khởi tạo môi trường, Ví MetaMask & Giao dịch đầu tiên | `lab02.md` | ✅ Hoàn thành |
+| **Lab 3** | Đọc giao dịch và hợp đồng USDT trên Etherscan | `lab03.md` | ✅ Hoàn thành |
+| **Lab 4** | Thẩm định đặc quyền Owner & Rủi ro Smart Contract | `lab04.md` | ✅ Hoàn thành |
+| **Lab 5** | Viết đặc tả yêu cầu công cụ phân tích dòng tiền ví | `lab05.md` / `SPEC.md` | ✅ Hoàn thành |
+| **Lab 6** | Sinh mã Python bằng AI & Kiểm tra 2 lỗi nghiệp vụ | `cashflow_analyzer.py` / `docs/AI_JOURNAL.md` | ✅ Hoàn thành |
+| **Lab 7** | Phân tích chi phí vận hành Gas Fee (Layer 1 vs Layer 2) | `lab07.md` | ✅ Hoàn thành |
 
-Đưa lên GitHub (làm khi đã có tài khoản; cần trước khi nộp Lab 1):
+---
 
-```bash
-git init -b main
-git add .
-git commit -m "chore: thiet lap moi truong lam viec"
-git remote add origin https://github.com/<tai-khoan>/<ten-repo>.git   # repo tạo TRỐNG trên GitHub
-git push -u origin main
-```
+## 🛠️ Công cụ và Công nghệ sử dụng
+* **Blockchain Explorers & API:** Etherscan, CoinMarketCap.
+* **Ngôn ngữ & Môi trường:** Python 3.10+, Git, GitHub.
+* **Hỗ trợ thẩm định & lập trình:** AI Assistant.
 
-Lab 8 (repo nhóm): một thành viên tạo repo trống mới, đưa nội dung thư mục này lên theo đúng các
-lệnh trên, rồi mời các thành viên khác làm collaborator.
+---
 
-## Cấu trúc
-
-- `contracts/training/`: hợp đồng mẫu dùng ở Lab 9, 10, 11 và 13
-  (`TimeLockVault`, `VaultBuggy`, `ClassPoint`, `VulnerableBank`).
-- `contracts/lab04/ClubTokens.sol`: ba token dùng cho Lab 4.
-- `web/index.html`: giao diện mẫu dùng ở Lab 15.
-- `prompt_templates.md`: mẫu câu lệnh có yêu cầu và tiêu chí kiểm chứng rõ ràng.
-
-Các hợp đồng có chữ `Buggy`, `Vulnerable` hoặc cảnh báo trong mã đều chứa lỗi có chủ đích.
-
-## Chạy hợp đồng
-
-- Cách chính: mở Remix IDE (`https://remix.ethereum.org`), tạo tệp, dán mã. Remix tự tải thư viện
-  `@openzeppelin/...`, không cần cài gì.
-- Nếu Antigravity gạch đỏ dòng `import "@openzeppelin/..."`: đó là do máy chưa có thư viện, mã
-  không sai. Muốn hết gạch đỏ thì cài Node.js rồi chạy `npm install` trong thư mục này (không bắt buộc).
+## 📓 Nhật ký làm việc với AI
+Toàn bộ quá trình tương tác, các câu lệnh prompt mẫu, kiểm chứng đối chiếu thủ công và phát hiện lỗi do AI sinh ra được ghi nhận chi tiết tại: [docs/AI_JOURNAL.md](./AI_JOURNAL.md)
